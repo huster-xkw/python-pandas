@@ -61,6 +61,11 @@ for i in N_words:
         last = i[0]
 data['count'] = L_count
 print(data['Name'][data['count'].idxmax()])
+```
+#### 【练习二】现有一份关于科比的投篮数据集，请解决如下问题：
+#### （a）哪种action_type和combined_shot_type的组合是最多的？
+#### （b）在所有被记录的game_id中，遭遇到最多的opponent是一个支？
+```
 df = pd.read_csv('data/Kobe_data.csv',index_col='shot_id')
 #index_col的作用是将某一列作为行索引
 print(pd.Series(list(zip(data['action_type'],data['combined_shot_type']))).value_counts().index[0])
